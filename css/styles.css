@@ -1,0 +1,361 @@
+/* * * * * * * * * * * * * * * * * * * * *
+General
+* * * * * * * * * * * * * * * * * * * * */
+  
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    min-width: 420px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+}
+
+/* * * * * * * * * * * * * * * * * * * * *
+Header
+* * * * * * * * * * * * * * * * * * * * */
+
+header {
+    background: linear-gradient(90deg, #e20ab3,#9405c0,#6900b9);
+    color: white; 
+    border-bottom:3px solid rgb(253, 200, 27);
+    min-height: 70px;  
+    padding: 5px 0;       
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 10px auto;    
+    
+}
+
+.logo i {
+    display: inline-flex;
+    margin-right: 10px;
+    font-size: 1.7em;
+}
+
+.logo h2 {
+    display: inline-flex;
+    font-size: 1.7em;
+    font-weight: normal;
+}
+
+.logo span {
+    color: rgb(253, 200, 27);
+    margin-right: 5px;
+}
+
+header ul {
+    display : flex;
+    align-items: stretch;
+    margin : 0;
+    padding: 0;
+}
+
+header li {
+    list-style: none;
+    margin : 0 2px;
+}
+
+header a {
+    color: white;
+    padding : 15px 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+
+}
+
+nav a:hover {
+    background-color: #be03959a;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.active a {
+    color: #e20ab3;
+    font-weight: bold;
+}
+
+.hamburger-icon {
+    display: none;
+    background: transparent;
+    border: none;
+    color: white;
+}
+.mobile-container {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: .5s ease-in-out;
+    transform: translateX(500px);
+}
+
+.mobile-container.open {
+    transform: translateX(0px);
+}
+
+.mobile-menu{
+    display: none;
+}
+
+#close-mobile
+{
+    float: right;
+}
+
+@media screen and (max-width: 900px) {
+    .logo h2 {
+        font-size: 1.4em;
+        
+    }
+
+    .logo i {
+        font-size: 1.5em;
+       
+    }
+
+    header ul {
+        display: none;
+    }
+
+    .hamburger-icon {
+        display: block;
+        
+    }
+    .mobile-menu{
+        display: block;
+    }
+
+    .mobile-menu ul {
+        display: block;
+        margin-top: 70px;
+    }
+
+    .mobile-menu li {
+        display: block;
+        text-align: right;
+        padding : 20px ;
+
+    }
+
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * *
+Hero
+* * * * * * * * * * * * * * * * * * * * */
+
+.hero {
+    height: 640px;;
+    background: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)),url('../images/hero_index.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-bottom:5px solid rgb(253, 200, 27);
+}
+
+.hero-content  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 60%;    
+    margin: auto;
+    color: white;
+    height:600px;
+    
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.hero-content p {
+    max-width: 700px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.5 ;
+    
+}
+
+.hero button {
+    color: white;
+    border: none;
+    border-radius: 30px;
+    background: #e20ab3;
+    padding: 10px 25px;
+}
+
+.hero button:hover{
+    cursor: pointer;
+    background: grey;;
+}
+
+/* /* * * * * * * * * * * * * * * * * * * * *
+Main
+* * * * * * * * * * * * * * * * * * * * */
+main {
+    width: 70%;
+    margin: auto;
+    padding: 30px;
+}
+
+.intro {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.7;
+}
+
+.pic-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+    padding:20px;
+
+}
+
+.pic {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+figure {
+    overflow: hidden;
+  }
+
+.pic figure img {
+    width: 100%;
+    transform: scale(1);	
+	transition: .3s ease-in-out;
+}
+
+.pic figure:hover img {
+    transform: scale(1.2);
+}
+
+@media screen and (max-width: 800px) {
+    .pic-box {
+        display: block;
+        width: 90%;
+       
+    }
+
+}
+
+
+/* /* * * * * * * * * * * * * * * * * * * * *
+Footer
+* * * * * * * * * * * * * * * * * * * * */
+
+footer {
+    margin-top: 20px;
+    padding: 10px 0;
+    background: linear-gradient(90deg, #e20ab3,#9405c0,#6900b9);
+    
+}
+
+.wrapper-footer {
+    width: 80%;
+    margin: auto; 
+}
+
+.footer-links {
+    display:flex;
+    justify-content: center;
+    margin: auto;
+    padding: 5px;
+}
+
+.footer-links ul {
+    margin: 0 auto;
+    padding: 0;
+}
+
+.footer-links li { 
+    display: inline-flex;
+    list-style: none;
+    
+} 
+
+
+.footer-links a { 
+    justify-content: space-between;
+    text-decoration: none;
+    text-transform: uppercase;    
+    font-size: 14px;
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.7);
+    
+} 
+
+.footer-links a:hover {
+    color: white;
+}
+
+.social-icons h2 {
+    font-size: 1.0em;
+    text-align: center;
+    color: white;
+    
+}
+
+.social-icons ul {
+    display: flex;    
+    justify-content: center;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.social-icons li {
+    list-style: none;
+    
+}
+
+.social-icons a {
+    font-size: 2em;
+    color: rgba(255, 255, 255, 0.7);
+        
+}
+
+.social-icons a:hover {
+    color: white;
+}
+
+.social-icons i {
+    padding: 0 10px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+
+.copy {
+    text-align: center;
+    padding: 10px 0;
+    color:white;
+    font-size: 12px;
+}
+

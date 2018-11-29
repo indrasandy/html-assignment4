@@ -1,0 +1,84 @@
+
+
+/* * * * * * * * * * * * * * * * * * * * *
+Hero
+* * * * * * * * * * * * * * * * * * * * */
+.hero {
+    height: 640px;;
+    background: radial-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.4)),url('../images/img_services.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-bottom:5px solid rgb(253, 200, 27);
+}
+
+/* * * * * * * * * * * * * * * * * * * * *
+Main
+* * * * * * * * * * * * * * * * * * * * */
+
+main {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 10px;
+}
+
+.box1, .box2, .box3 {
+    width:30%; 
+      
+}
+
+img {
+    overflow: hidden;
+}
+
+.img img {
+    width:100%;
+    transform: scale(1);
+    transition: .3s ease-in-out;
+    
+    
+}
+
+.img img :hover img {
+    transform: scale(1.2);
+}
+
+.content1, .content2, .content3 {
+    text-align: center;
+    line-height: 1.5;
+}
+
+button {
+    color: white;
+    border: none;
+    border-radius: 30px;
+    background: #e20ab3;
+    padding: 10px 25px;
+}
+
+button:hover{
+    cursor: pointer;
+    background: grey;;
+}
+
+@media screen and (max-width: 800px) {
+
+    main {
+        width: 100%;
+        margin: auto;
+        display: block;
+    }
+
+    .box1, .box2, .box3 {
+        width:80%; 
+        margin: auto;  
+    }
+    
+    button {
+        margin-bottom: 30px;
+    }
+
+}
